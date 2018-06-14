@@ -34,7 +34,7 @@ public class CustomerController {
         service.addCustomer(customer);
         return new ResponseEntity<>(service.getAllCustomers(), HttpStatus.CREATED);
 
-    };
+    }
 
     @PutMapping("customer")
     public ResponseEntity<Customer> updateCustomer(@RequestBody Customer customer){
@@ -48,6 +48,4 @@ public class CustomerController {
         service.deleteCustomer(id);
         return new ResponseEntity<>(service.getAllCustomers(), HttpStatus.NO_CONTENT);
     }
-
-
 }
